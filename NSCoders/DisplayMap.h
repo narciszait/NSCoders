@@ -13,6 +13,7 @@
     CLLocationCoordinate2D coordinate;
     NSString *title;
     int un_numar;
+    int al_doilea_numar;
 }
 
 @property (nonatomic,assign) CLLocationCoordinate2D coordinate;
