@@ -42,17 +42,17 @@
 						<string key="NSFrameSize">{320, 411}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="471258234"/>
+						<reference key="NSNextKeyView" ref="403031830"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBMKShowsUserLocation">YES</bool>
 					</object>
-					<object class="IBUIToolbar" id="471258234">
+					<object class="IBUIToolbar" id="403031830">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">266</int>
-						<string key="NSFrame">{{0, 324}, {320, 44}}</string>
+						<string key="NSFrame">{{0, 367}, {320, 44}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -103,7 +103,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">toolbar</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="471258234"/>
+						<reference key="destination" ref="403031830"/>
 					</object>
 					<int key="connectionID">25</int>
 				</object>
@@ -129,7 +129,7 @@
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="1067725195"/>
-							<reference ref="471258234"/>
+							<reference ref="403031830"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -151,7 +151,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">19</int>
-						<reference key="object" ref="471258234"/>
+						<reference key="object" ref="403031830"/>
 						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -177,19 +177,38 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">MapViewController</string>
 					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="showDrivingRoute:">id</string>
+						<string key="showPublicTransport:">id</string>
+						<string key="showUserLocation:">id</string>
+						<string key="showWalkingRoute:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="showDrivingRoute:">
+							<string key="name">showDrivingRoute:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showPublicTransport:">
+							<string key="name">showPublicTransport:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showUserLocation:">
+							<string key="name">showUserLocation:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showWalkingRoute:">
+							<string key="name">showWalkingRoute:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="map">MKMapView</string>
-						<string key="segment">UISegmentedControl</string>
 						<string key="toolbar">UIToolbar</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="map">
 							<string key="name">map</string>
 							<string key="candidateClassName">MKMapView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="segment">
-							<string key="name">segment</string>
-							<string key="candidateClassName">UISegmentedControl</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="toolbar">
 							<string key="name">toolbar</string>

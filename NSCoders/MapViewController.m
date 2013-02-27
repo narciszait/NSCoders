@@ -106,8 +106,12 @@
     UIBarButtonItem *button2=[[UIBarButtonItem alloc] initWithTitle:@"2" style:UIBarButtonItemStyleBordered target:self action:@selector(showDrivingRoute:)];
     UIBarButtonItem *button3=[[UIBarButtonItem alloc] initWithTitle:@"3" style:UIBarButtonItemStyleBordered target:self action:@selector(showWalkingRoute:)];
     UIBarButtonItem *button4=[[UIBarButtonItem alloc] initWithTitle:@"4" style:UIBarButtonItemStyleBordered target:self action:@selector(showPublicTransport:)];
+    UIBarButtonItem *flexibleSpace1=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *flexibleSpace2=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *flexibleSpace3=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+
     
-    NSArray *buttonItems = [NSArray arrayWithObjects:button1, button2, button3, button4, nil];
+    NSArray *buttonItems = [NSArray arrayWithObjects:button1, flexibleSpace1, button2, flexibleSpace2, button3, flexibleSpace3, button4, nil];
     [toolbar setItems:buttonItems];
     [self.view addSubview:toolbar];
     
@@ -115,6 +119,9 @@
     [button2 release];
     [button3 release];
     [button4 release];
+    [flexibleSpace1 release];
+    [flexibleSpace2 release];
+    [flexibleSpace3 release];
 }
 
 -(IBAction)showUserLocation:(id)sender{
