@@ -12,6 +12,7 @@
 @implementation MapViewController
 
 @synthesize map; //currentLocation
+@synthesize toolbar;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,6 +40,8 @@
     UIColor *color = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"vertical_cloth.png"]];
     self.view.backgroundColor = color;
     [color release];
+    
+    [self createToolbar];
     
     [map setMapType:MKMapTypeStandard];
     [map setZoomEnabled:YES];
@@ -78,25 +81,59 @@
     return pinView;
 }
 
--(IBAction)showUser:(id)sender{
-   [map setCenterCoordinate:map.userLocation.coordinate animated:YES]; 
-}
-
--(IBAction)showRoute:(id)sender{
-    //UIActionSheet *sheet=[[UIActionSheet alloc] initWithTitle:@"Open in Maps" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:@"Apple Maps",@"Google Maps", nil];
-    //[sheet showInView:self.view];
-    
-        UIAlertView *alertUser=[[UIAlertView alloc] initWithTitle:@"Open external app" message:@"This will open Apple Maps" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
-        [alertUser show];
-        [alertUser release];
-    
-    //    UIApplication *app = [UIApplication sharedApplication];
-    //    [app openURL:[NSURL URLWithString:@"http://maps.google.com/maps?q=Paris"]];
-}
+//-(IBAction)showUser:(id)sender{
+//   [map setCenterCoordinate:map.userLocation.coordinate animated:YES]; 
+//}
+//
+//-(IBAction)showRoute:(id)sender{
+//    //UIActionSheet *sheet=[[UIActionSheet alloc] initWithTitle:@"Open in Maps" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:@"Apple Maps",@"Google Maps", nil];
+//    //[sheet showInView:self.view];
+//    
+//        UIAlertView *alertUser=[[UIAlertView alloc] initWithTitle:@"Open external app" message:@"This will open Apple Maps" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+//        [alertUser show];
+//        [alertUser release];
+//    
+//    //    UIApplication *app = [UIApplication sharedApplication];
+//    //    [app openURL:[NSURL URLWithString:@"http://maps.google.com/maps?q=Paris"]];
+//}
 
 //-(void)actionSheet:(UIActionSheet*)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
  //   CLLocationCoordinate2D
 //}
+
+-(void)createToolbar{
+    UIBarButtonItem *button1=[[UIBarButtonItem alloc] initWithTitle:@"1" style:UIBarButtonItemStyleBordered target:self action:@selector(showUserLocation:)];
+    UIBarButtonItem *button2=[[UIBarButtonItem alloc] initWithTitle:@"2" style:UIBarButtonItemStyleBordered target:self action:@selector(showDrivingRoute:)];
+    UIBarButtonItem *button3=[[UIBarButtonItem alloc] initWithTitle:@"3" style:UIBarButtonItemStyleBordered target:self action:@selector(showWalkingRoute:)];
+    UIBarButtonItem *button4=[[UIBarButtonItem alloc] initWithTitle:@"4" style:UIBarButtonItemStyleBordered target:self action:@selector(showPublicTransport:)];
+    
+    NSArray *buttonItems = [NSArray arrayWithObjects:button1, button2, button3, button4, nil];
+    [toolbar setItems:buttonItems];
+    [self.view addSubview:toolbar];
+    
+    [button1 release];
+    [button2 release];
+    [button3 release];
+    [button4 release];
+}
+
+-(IBAction)showUserLocation:(id)sender{
+    NSLog(@"User Location");
+}
+
+-(IBAction)showDrivingRoute:(id)sender{
+     NSLog(@"driving route");
+}
+
+-(IBAction)showWalkingRoute:(id)sender{
+    NSLog(@"walking route");
+}
+
+-(IBAction)showPublicTransport:(id)sender{
+    NSLog(@"Public transport");
+}
+
+
 
 -(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex==0){

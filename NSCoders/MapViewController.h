@@ -13,11 +13,19 @@
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, UIAlertViewDelegate>{
     IBOutlet MKMapView *map;
+    IBOutlet UIToolbar *toolbar;
 }
 
 @property (nonatomic,retain) IBOutlet MKMapView *map;
 
--(IBAction)showUser:(id)sender;
--(IBAction)showRoute:(id)sender;
+@property (nonatomic,retain) IBOutlet UIToolbar *toolbar;
+
+
+//-(IBAction)showUser:(id)sender;
+//-(IBAction)showRoute:(id)sender;
+-(IBAction)showUserLocation:(id)sender;
+-(IBAction)showDrivingRoute:(id)sender;
+-(IBAction)showWalkingRoute:(id)sender;
+-(IBAction)showPublicTransport:(id)sender;
 
 @end
