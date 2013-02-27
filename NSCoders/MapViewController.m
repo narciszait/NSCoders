@@ -102,10 +102,32 @@
 //}
 
 -(void)createToolbar{
-    UIBarButtonItem *button1=[[UIBarButtonItem alloc] initWithTitle:@"1" style:UIBarButtonItemStyleBordered target:self action:@selector(showUserLocation:)];
-    UIBarButtonItem *button2=[[UIBarButtonItem alloc] initWithTitle:@"2" style:UIBarButtonItemStyleBordered target:self action:@selector(showDrivingRoute:)];
-    UIBarButtonItem *button3=[[UIBarButtonItem alloc] initWithTitle:@"3" style:UIBarButtonItemStyleBordered target:self action:@selector(showWalkingRoute:)];
-    UIBarButtonItem *button4=[[UIBarButtonItem alloc] initWithTitle:@"4" style:UIBarButtonItemStyleBordered target:self action:@selector(showPublicTransport:)];
+    [toolbar setBarStyle:UIBarStyleBlackTranslucent];
+    [toolbar setTranslucent:YES];
+   
+    UIImage *locateUser = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"locateUser" ofType:@"png"]];
+    UIButton *locateUserButton = [[UIButton alloc] init];
+    [locateUserButton setImage:locateUser forState:UIControlStateNormal];
+    
+    UIImage *car = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"car" ofType:@"png"]];
+    UIButton *carButton = [[UIButton alloc] init];
+    [carButton setImage:car forState:UIControlStateNormal];
+    
+    UIImage *walk = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"walk" ofType:@"png"]];
+    UIButton *walkButton = [[UIButton alloc] init];
+    [walkButton setImage:walk forState:UIControlStateNormal];
+    
+    UIImage *public = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"public" ofType:@"png"]];
+    UIButton *publicButton = [[UIButton alloc] init];
+    [publicButton setImage:public forState:UIControlStateNormal];
+
+    
+    UIBarButtonItem *button1 = [[UIBarButtonItem alloc] initWithCustomView:locateUserButton];
+    UIBarButtonItem *button2 = [[UIBarButtonItem alloc] initWithCustomView:carButton];
+    UIBarButtonItem *button3 = [[UIBarButtonItem alloc] initWithCustomView:walkButton];
+    UIBarButtonItem *button4 = [[UIBarButtonItem alloc] initWithCustomView:publicButton];
+    
+    
     UIBarButtonItem *flexibleSpace1=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     UIBarButtonItem *flexibleSpace2=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     UIBarButtonItem *flexibleSpace3=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
@@ -114,14 +136,7 @@
     NSArray *buttonItems = [NSArray arrayWithObjects:button1, flexibleSpace1, button2, flexibleSpace2, button3, flexibleSpace3, button4, nil];
     [toolbar setItems:buttonItems];
     [self.view addSubview:toolbar];
-    
-    [button1 release];
-    [button2 release];
-    [button3 release];
-    [button4 release];
-    [flexibleSpace1 release];
-    [flexibleSpace2 release];
-    [flexibleSpace3 release];
+
 }
 
 -(IBAction)showUserLocation:(id)sender{

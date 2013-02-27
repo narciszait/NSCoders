@@ -63,7 +63,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIColor *color = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"worn_dots.png"]];
+    UIColor *color = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bright_squares.png"]];
     cell.backgroundColor = color;
     [color release];
     cell.textLabel.textColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:1];
