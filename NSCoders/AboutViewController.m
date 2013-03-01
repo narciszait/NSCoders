@@ -37,13 +37,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    UIColor *color = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"vertical_cloth.png"]];
+    UIColor *color = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bright_squares.png"]];
     self.view.backgroundColor = color;
     
     
-    description.textColor=[UIColor colorWithRed:0.875 green:0.875 blue:0.875 alpha:1];
-    linkToNS.textColor=[UIColor colorWithRed:0.875 green:0.875 blue:0.875 alpha:1];
-    linkToCph.textColor=[UIColor colorWithRed:0.875 green:0.875 blue:0.875 alpha:1];
+    description.textColor=[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1];
+    linkToNS.textColor=[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1];
+    linkToCph.textColor=[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1];
     
     UITapGestureRecognizer *gestureRecCph = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openUrl:)];
     gestureRecCph.numberOfTouchesRequired = 1;
@@ -67,8 +67,12 @@
     id hitLabel = [self.view hitTest:[rec locationInView:self.view] withEvent:UIEventTypeTouches];
     
     if ([hitLabel isKindOfClass:[UILabel class]]) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:((UILabel *)hitLabel).text]];
-    }
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:((UILabel *)hitLabel).text]];
+
+        UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];  //Change self.view.bounds to a smaller CGRect if you don't want it to take up the whole screen
+        [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:((UILabel *)hitLabel).text]]];
+        [self.view addSubview:webView];
+        [webView release];}
 }
 
 - (void)viewDidUnload
