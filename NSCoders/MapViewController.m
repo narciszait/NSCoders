@@ -102,7 +102,7 @@
 //}
 
 -(void)createToolbar{
-    [toolbar setBarStyle:UIBarStyleBlackTranslucent];
+    toolbar.tintColor=[[UIColor alloc] initWithRed:0.882 green:0.894 blue:0.941 alpha:1]; 
     [toolbar setTranslucent:YES];
    
     UIImage *locateUser = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"locateUser" ofType:@"png"]];
@@ -126,7 +126,7 @@
     UIImage *public = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"public" ofType:@"png"]];
     UIButton *publicButton = [[UIButton alloc] init];
     [publicButton setImage:public forState:UIControlStateNormal];
-    [publicButton addTarget:self action:@selector(showWalkingRoute:) forControlEvents:UIControlEventTouchUpInside];
+    [publicButton addTarget:self action:@selector(showPublicTransport:) forControlEvents:UIControlEventTouchUpInside];
     [publicButton setFrame:CGRectMake(0, 0, 30, 32)];
 
     
