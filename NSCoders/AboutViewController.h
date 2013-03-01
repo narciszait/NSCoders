@@ -10,13 +10,16 @@
 
 @interface AboutViewController : UIViewController{
    IBOutlet UILabel  *description;
-   IBOutlet UILabel *linkToCph;
-   IBOutlet UILabel *linkToNS;
+   IBOutlet UIButton *linkToCph;
+   IBOutlet UIButton *linkToNS;
 }
 
 @property (nonatomic,retain) IBOutlet UILabel *description;
-@property (nonatomic,retain) IBOutlet UILabel *linkToCph;
-@property (nonatomic,retain) IBOutlet UILabel *linkToNS;
+@property (nonatomic,retain) IBOutlet UIButton *linkToCph;
+@property (nonatomic,retain) IBOutlet UIButton *linkToNS;
+
+-(IBAction)openLinkToCPH:(id)sender;
+-(IBAction)openLinkToNS:(id)sender;
 
 
 @end

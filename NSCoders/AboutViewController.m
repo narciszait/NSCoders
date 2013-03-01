@@ -42,37 +42,56 @@
     
     
     description.textColor=[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1];
-    linkToNS.textColor=[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1];
-    linkToCph.textColor=[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1];
+    [linkToNS setTitleColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1] forState:UIControlStateNormal];
+    [linkToNS setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0]];
+    [linkToNS setBackgroundColor:[UIColor clearColor]];
     
-    UITapGestureRecognizer *gestureRecCph = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openUrl:)];
-    gestureRecCph.numberOfTouchesRequired = 1;
-    gestureRecCph.numberOfTapsRequired = 1;
-    [linkToCph addGestureRecognizer:gestureRecCph];
-    [gestureRecCph release];
+    [linkToCph setTitleColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1] forState:UIControlStateNormal];
+    [linkToCph setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0]];
+    [linkToCph setBackgroundColor:[UIColor clearColor]];
     
-    UITapGestureRecognizer *gestureRecNS = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openUrl:)];
-    gestureRecNS.numberOfTouchesRequired = 1;
-    gestureRecNS.numberOfTapsRequired = 1;
-    [linkToNS addGestureRecognizer:gestureRecNS];
-    [gestureRecNS release];
+//    UITapGestureRecognizer *gestureRecCph = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openUrl:)];
+//    gestureRecCph.numberOfTouchesRequired = 1;
+//    gestureRecCph.numberOfTapsRequired = 1;
+//    [linkToCph addGestureRecognizer:gestureRecCph];
+//    [gestureRecCph release];
+//    
+//    UITapGestureRecognizer *gestureRecNS = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openUrl:)];
+//    gestureRecNS.numberOfTouchesRequired = 1;
+//    gestureRecNS.numberOfTapsRequired = 1;
+//    [linkToNS addGestureRecognizer:gestureRecNS];
+//    [gestureRecNS release];
     
    [color release];
 }
 
-- (void)openUrl:(id)sender
-{
-    UIGestureRecognizer *rec = (UIGestureRecognizer *)sender;
-    
-    id hitLabel = [self.view hitTest:[rec locationInView:self.view] withEvent:UIEventTypeTouches];
-    
-    if ([hitLabel isKindOfClass:[UILabel class]]) {
-//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:((UILabel *)hitLabel).text]];
+//- (void)openUrl:(id)sender
+//{
+//    UIGestureRecognizer *rec = (UIGestureRecognizer *)sender;
+//    
+//    id hitLabel = [self.view hitTest:[rec locationInView:self.view] withEvent:UIEventTypeTouches];
+//    
+//    if ([hitLabel isKindOfClass:[UILabel class]]) {
+////        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:((UILabel *)hitLabel).text]];
+//
+//        UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];  //Change self.view.bounds to a smaller CGRect if you don't want it to take up the whole screen
+//        
+//        
+//        [self createToolbar];
+//        
+//        
+//        [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:((UILabel *)hitLabel).text]]];
+//        [self.view addSubview:webView];
+//        [webView release];}
+//}
 
-        UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];  //Change self.view.bounds to a smaller CGRect if you don't want it to take up the whole screen
-        [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:((UILabel *)hitLabel).text]]];
-        [self.view addSubview:webView];
-        [webView release];}
+-(IBAction)openLinkToCPH:(id)sender{
+    NSLog(@"link to CPH");
+    
+}
+
+-(IBAction)openLinkToNS:(id)sender{
+    NSLog(@"link to NS");
 }
 
 - (void)viewDidUnload
