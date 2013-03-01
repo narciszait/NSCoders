@@ -108,18 +108,26 @@
     UIImage *locateUser = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"locateUser" ofType:@"png"]];
     UIButton *locateUserButton = [[UIButton alloc] init];
     [locateUserButton setImage:locateUser forState:UIControlStateNormal];
+    [locateUserButton addTarget:self action:@selector(showUserLocation:) forControlEvents:UIControlEventTouchUpInside];
+    [locateUserButton setFrame:CGRectMake(0, 0, 30, 32)];
     
     UIImage *car = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"car" ofType:@"png"]];
     UIButton *carButton = [[UIButton alloc] init];
     [carButton setImage:car forState:UIControlStateNormal];
+    [carButton addTarget:self action:@selector(showDrivingRoute:) forControlEvents:UIControlEventTouchUpInside];
+    [carButton setFrame:CGRectMake(0, 0, 30, 32)];
     
     UIImage *walk = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"walk" ofType:@"png"]];
     UIButton *walkButton = [[UIButton alloc] init];
     [walkButton setImage:walk forState:UIControlStateNormal];
+    [walkButton addTarget:self action:@selector(showWalkingRoute:) forControlEvents:UIControlEventTouchUpInside];
+    [walkButton setFrame:CGRectMake(0, 0, 30, 32)];
     
     UIImage *public = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"public" ofType:@"png"]];
     UIButton *publicButton = [[UIButton alloc] init];
     [publicButton setImage:public forState:UIControlStateNormal];
+    [publicButton addTarget:self action:@selector(showWalkingRoute:) forControlEvents:UIControlEventTouchUpInside];
+    [publicButton setFrame:CGRectMake(0, 0, 30, 32)];
 
     
     UIBarButtonItem *button1 = [[UIBarButtonItem alloc] initWithCustomView:locateUserButton];

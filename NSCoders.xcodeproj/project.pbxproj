@@ -738,10 +738,7 @@
 		ECFE91C0152DD4AF009F4B6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Narcis Zait (BZN8CFPRK6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Narcis Zait (BZN8CFPRK6)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -768,10 +765,7 @@
 		ECFE91C1152DD4AF009F4B6F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Laurentiu Narcis Zait";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Laurentiu Narcis Zait";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
