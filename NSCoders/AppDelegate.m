@@ -16,6 +16,8 @@
 
 #import "TwitterFeed.h"
 
+#import "LaunchImageTransition.h"
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -31,7 +33,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
+        // Override point for customization after application launch.
     UIViewController *twitterFeed = [[[TwitterFeedViewController alloc] initWithNibName:@"TwitterFeedViewController" bundle:nil] autorelease];
     UIViewController *mapView = [[[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil] autorelease];
     UIViewController *aboutController=[[[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil]autorelease];
@@ -39,6 +41,7 @@
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:twitterFeed, mapView, aboutController, nil];
     
     self.window.rootViewController = self.tabBarController;
+    
     
     if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &&
         ([UIScreen mainScreen].scale == 2.0)) {

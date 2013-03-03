@@ -17,6 +17,10 @@
 		EC10A35016DE444D0093B3A2 /* walk.png in Resources */ = {isa = PBXBuildFile; fileRef = EC10A34816DE444D0093B3A2 /* walk.png */; };
 		EC10A35116DE444D0093B3A2 /* walk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC10A34916DE444D0093B3A2 /* walk@2x.png */; };
 		EC24157116BAA23600A3179C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC24157016BAA23600A3179C /* Default-568h@2x.png */; };
+		EC5CB17616E124F10055B16C /* CPH_Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5CB17416E124F10055B16C /* CPH_Cocoa.m */; };
+		EC5CB17716E124F10055B16C /* CPH_Cocoa.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC5CB17516E124F10055B16C /* CPH_Cocoa.xib */; };
+		EC5CB17B16E125220055B16C /* NSCoders_Night.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5CB17916E125220055B16C /* NSCoders_Night.m */; };
+		EC5CB17C16E125220055B16C /* NSCoders_Night.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC5CB17A16E125220055B16C /* NSCoders_Night.xib */; };
 		EC6D320515A8586D00F3E5DD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6D320415A8586D00F3E5DD /* MapKit.framework */; };
 		EC6D320815A8587200F3E5DD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6D320715A8587200F3E5DD /* CoreLocation.framework */; };
 		EC6D322515A8A4A200F3E5DD /* DisplayMap.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6D322415A8A4A200F3E5DD /* DisplayMap.m */; };
@@ -105,7 +109,13 @@
 		EC10A34716DE444C0093B3A2 /* public@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "public@2x.png"; sourceTree = "<group>"; };
 		EC10A34816DE444D0093B3A2 /* walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walk.png; sourceTree = "<group>"; };
 		EC10A34916DE444D0093B3A2 /* walk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "walk@2x.png"; sourceTree = "<group>"; };
-		EC24157016BAA23600A3179C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EC24157016BAA23600A3179C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		EC5CB17316E124F10055B16C /* CPH_Cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPH_Cocoa.h; sourceTree = "<group>"; };
+		EC5CB17416E124F10055B16C /* CPH_Cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPH_Cocoa.m; sourceTree = "<group>"; };
+		EC5CB17516E124F10055B16C /* CPH_Cocoa.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPH_Cocoa.xib; sourceTree = "<group>"; };
+		EC5CB17816E125220055B16C /* NSCoders_Night.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCoders_Night.h; sourceTree = "<group>"; };
+		EC5CB17916E125220055B16C /* NSCoders_Night.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCoders_Night.m; sourceTree = "<group>"; };
+		EC5CB17A16E125220055B16C /* NSCoders_Night.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSCoders_Night.xib; sourceTree = "<group>"; };
 		EC6D320415A8586D00F3E5DD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EC6D320715A8587200F3E5DD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EC6D322315A8A4A200F3E5DD /* DisplayMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayMap.h; sourceTree = "<group>"; };
@@ -378,7 +388,6 @@
 		ECFE9188152DD4AF009F4B6F = {
 			isa = PBXGroup;
 			children = (
-				EC24157016BAA23600A3179C /* Default-568h@2x.png */,
 				ECFE919D152DD4AF009F4B6F /* NSCoders */,
 				ECFE9196152DD4AF009F4B6F /* Frameworks */,
 				ECFE9194152DD4AF009F4B6F /* Products */,
@@ -434,6 +443,7 @@
 		ECFE91D6152E0AD0009F4B6F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EC24157016BAA23600A3179C /* Default-568h@2x.png */,
 				EC10A34216DE444B0093B3A2 /* car.png */,
 				EC10A34316DE444B0093B3A2 /* car@2x.png */,
 				EC10A34416DE444C0093B3A2 /* locateUser.png */,
@@ -472,6 +482,8 @@
 				ECFE91B7152DD4AF009F4B6F /* TwitterFeedViewController.xib */,
 				ECFE91BA152DD4AF009F4B6F /* MapViewController.xib */,
 				ECFE91C7152DF8A0009F4B6F /* AboutViewController.xib */,
+				EC5CB17516E124F10055B16C /* CPH_Cocoa.xib */,
+				EC5CB17A16E125220055B16C /* NSCoders_Night.xib */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -494,6 +506,10 @@
 				EC6D322415A8A4A200F3E5DD /* DisplayMap.m */,
 				ECFE91C5152DF8A0009F4B6F /* AboutViewController.h */,
 				ECFE91C6152DF8A0009F4B6F /* AboutViewController.m */,
+				EC5CB17316E124F10055B16C /* CPH_Cocoa.h */,
+				EC5CB17416E124F10055B16C /* CPH_Cocoa.m */,
+				EC5CB17816E125220055B16C /* NSCoders_Night.h */,
+				EC5CB17916E125220055B16C /* NSCoders_Night.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -581,6 +597,8 @@
 				EC10A34F16DE444D0093B3A2 /* public@2x.png in Resources */,
 				EC10A35016DE444D0093B3A2 /* walk.png in Resources */,
 				EC10A35116DE444D0093B3A2 /* walk@2x.png in Resources */,
+				EC5CB17716E124F10055B16C /* CPH_Cocoa.xib in Resources */,
+				EC5CB17C16E125220055B16C /* NSCoders_Night.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +655,8 @@
 				ECF43592153742140093C29E /* OAToken.m in Sources */,
 				ECF43593153742140093C29E /* OATokenManager.m in Sources */,
 				EC6D322515A8A4A200F3E5DD /* DisplayMap.m in Sources */,
+				EC5CB17616E124F10055B16C /* CPH_Cocoa.m in Sources */,
+				EC5CB17B16E125220055B16C /* NSCoders_Night.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
