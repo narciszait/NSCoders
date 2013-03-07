@@ -43,7 +43,7 @@
     self.window.rootViewController = self.tabBarController;
     
     
-    if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &&
+    if (([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)]) &&
         ([UIScreen mainScreen].scale == 2.0)) {
         UIImageView *splashScreen = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default@2x.png"]];
         [self.window.rootViewController.view addSubview:splashScreen];

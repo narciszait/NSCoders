@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CPH_Cocoa : UIViewController {
-    IBOutlet UINavigationBar *backToolbar;
+@interface CPH_Cocoa : UIViewController <UIWebViewDelegate> {
+    IBOutlet UIToolbar *backToolbar;
     IBOutlet UIWebView *cphCocoa;
 }
 
-@property (nonatomic,retain) IBOutlet UINavigationBar *backToolbar;
+@property (nonatomic,retain) IBOutlet UIToolbar *backToolbar;
 @property (nonatomic,retain) IBOutlet UIWebView *cphCocoa;
 
 -(IBAction)backToApp:(id)sender;

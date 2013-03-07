@@ -13,6 +13,7 @@
 
 @synthesize map; //currentLocation
 @synthesize toolbar;
+@synthesize tabBarController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

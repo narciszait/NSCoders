@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "TwitterFeed.h"
 
-@interface TwitterFeedViewController : UIViewController{
+@interface TwitterFeedViewController : UIViewController <UITabBarControllerDelegate>{
     TwitterFeed *feedViewController;
 }
 
 @property (nonatomic, retain) TwitterFeed *feedViewController;
+
+@property (strong, nonatomic) UITabBarController *tabBarController;
 
 @end

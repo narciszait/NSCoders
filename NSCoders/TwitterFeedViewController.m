@@ -14,6 +14,7 @@
 @implementation TwitterFeedViewController
 
 @synthesize feedViewController;
+@synthesize tabBarController;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

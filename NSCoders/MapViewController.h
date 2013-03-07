@@ -11,7 +11,7 @@
 #import "CoreLocation/CoreLocation.h"
 #import "DisplayMap.h"
 
-@interface MapViewController : UIViewController <MKMapViewDelegate, UIAlertViewDelegate>{
+@interface MapViewController : UIViewController <MKMapViewDelegate, UIAlertViewDelegate, UITabBarControllerDelegate>{
     IBOutlet MKMapView *map;
     IBOutlet UIToolbar *toolbar;
 }
@@ -19,6 +19,8 @@
 @property (nonatomic,retain) IBOutlet MKMapView *map;
 
 @property (nonatomic,retain) IBOutlet UIToolbar *toolbar;
+
+@property (strong, nonatomic) UITabBarController *tabBarController;
 
 
 //-(IBAction)showUser:(id)sender;
