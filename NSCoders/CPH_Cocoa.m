@@ -11,16 +11,17 @@
 
 @implementation CPH_Cocoa
 
-@synthesize backToolbar;
-@synthesize cphCocoa;
+
+@synthesize cphCocoaWebView;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization        
-        backToolbar.tintColor=[[UIColor alloc] initWithRed:1 green:0 blue:0 alpha:1];
-        [backToolbar setTranslucent:YES];
+//        backToolbar.tintColor=[[UIColor alloc] initWithRed:1 green:0 blue:0 alpha:1];
+//        [backToolbar setTranslucent:YES];
         
 //        UIImage *back = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"locateUser" ofType:@"png"]];
 //        UIButton *backButton = [[UIButton alloc] init];
@@ -52,11 +53,11 @@
     //[self createToolbar];
     
     //[self.navigationController setToolbarHidden:NO];
-    cphCocoa=[[UIWebView alloc] initWithFrame:self.view.bounds];
-    [cphCocoa loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://copenhagencocoa.com"]]];
-    [self.view addSubview:cphCocoa];
-    cphCocoa.delegate=self;
-    [cphCocoa release];
+    cphCocoaWebView=[[UIWebView alloc] initWithFrame:self.view.bounds];
+    [cphCocoaWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://copenhagencocoa.com"]]];
+    [self.view addSubview:cphCocoaWebView];
+    cphCocoaWebView.delegate=self;
+    [cphCocoaWebView release];
 }
 
 
@@ -74,10 +75,13 @@
 }
 
 -(IBAction)backToApp:(id)sender{
-    AboutViewController *about=[[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
-    [self  presentModalViewController:about animated:YES];
+    NSLog(@"Back to App");
+    //AboutViewController *about=[[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
+    //[self  presentModalViewController:about animated:YES];
     
-    [about release];
+    //[about release];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

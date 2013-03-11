@@ -267,7 +267,7 @@ WW91IGNhbiBjaGVjayB0aGUgbGlua3MgYmVsb3c6A</string>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">22</int>
+			<int key="maxID">31</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -292,6 +292,7 @@ WW91IGNhbiBjaGVjayB0aGUgbGlua3MgYmVsb3c6A</string>
 						<string key="description">UILabel</string>
 						<string key="linkToCph">UIButton</string>
 						<string key="linkToNS">UIButton</string>
+						<string key="navController">UINavigationController</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="description">
@@ -305,6 +306,10 @@ WW91IGNhbiBjaGVjayB0aGUgbGlua3MgYmVsb3c6A</string>
 						<object class="IBToOneOutletInfo" key="linkToNS">
 							<string key="name">linkToNS</string>
 							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="navController">
+							<string key="name">navController</string>
+							<string key="candidateClassName">UINavigationController</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">

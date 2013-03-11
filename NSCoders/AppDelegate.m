@@ -37,8 +37,10 @@
     UIViewController *twitterFeed = [[[TwitterFeedViewController alloc] initWithNibName:@"TwitterFeedViewController" bundle:nil] autorelease];
     UIViewController *mapView = [[[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil] autorelease];
     UIViewController *aboutController=[[[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil]autorelease];
-    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:twitterFeed, mapView, aboutController, nil];
+   // NavigationViewController *navController=[[NavigationViewController alloc] init];
+    //UINavigationController *navigationController=[[UINavigationController alloc] initWithRootViewController:navController];
+    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:twitterFeed, mapView, aboutController,nil];
     
     self.window.rootViewController = self.tabBarController;
     

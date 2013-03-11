@@ -41,6 +41,8 @@
     UIColor *color = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bright_squares.png"]];
     self.view.backgroundColor = color;
     
+    //self.navController=[[UINavigationController alloc] initWithRootViewController:self];
+    
     
     description.textColor=[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1];
     [linkToNS setTitleColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1] forState:UIControlStateNormal];
@@ -56,10 +58,9 @@
 
 -(IBAction)openLinkToCPH:(id)sender{
     NSLog(@"link to CPH");
-    CPH_Cocoa *cphView=[[CPH_Cocoa alloc] initWithNibName:@"CPH_Cocoa" bundle:nil];
-    [self  presentModalViewController:cphView animated:YES];
+    CPH_Cocoa *cphCocoa=[[CPH_Cocoa alloc] init];
+    [self presentModalViewController:cphCocoa animated:YES];
     
-    [cphView release];
 }
 
 -(IBAction)openLinkToNS:(id)sender{
